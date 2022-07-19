@@ -32,5 +32,6 @@ public class s0425 {
             }
         }
         System.out.println(answer);
+
     }    
 }
