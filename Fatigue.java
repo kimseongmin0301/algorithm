@@ -4,12 +4,12 @@
  * dfs 어렵다
  * 이해가 될거 같으면서도 안된다 왠지 모른다 어렵다
  */
-public class Solution {
+public class Fatigue {
     static int answer = 0;
     static boolean[] visited;
 
     public static void main(String[] args) {
-        Solution test = new Solution();
+        Fatigue test = new Fatigue();
         int[][] d = {{80,20},{50,40,},{30,10}};
         System.out.print(test.solution(80, d));
     }
