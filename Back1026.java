@@ -1,21 +1,30 @@
-import java.io.*;
-import java.util.ArrayList;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class Back1026 {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+    public static void main(String[] args)  {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
         ArrayList<Integer> a = new ArrayList<>();
         ArrayList<Integer> b = new ArrayList<>();
 
-        int n = Integer.parseInt(br.readLine());
-
-        for (int i = 0; i < n; i++) {
-            a.add(Integer.parseInt(st.nextToken()));
-            b.add(Integer.parseInt(st.nextToken()));
+        for(int i=0; i<n; i++) {
+            a.add(sc.nextInt());
+        }
+        for(int i=0; i<n; i++){
+            b.add(sc.nextInt());
         }
 
-        System.out.println(a);
+        Collections.sort(b);
+        Collections.sort(a,Comparator.reverseOrder());
+
+        int sum = 0;
+
+        for(int i=0; i<n; i++){
+            sum += a.get(i) * b.get(i);
+        }
+
+        System.out.println(sum);
     }
 }
+
