@@ -32,8 +32,6 @@ public class Shiritori {
                 set.add(words[i]);
                 lastChar = words[i].charAt(words[i].length() - 1);
             }
-
-            System.out.println(set);
         }
 
         return answer;
